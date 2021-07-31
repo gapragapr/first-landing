@@ -361,6 +361,7 @@ header path{
     font-weight: 600;
     font-style: italic;
     font-size: 24px;
+    text-align: center;
 }
 .section-item:first-child{
     margin-left: 0;

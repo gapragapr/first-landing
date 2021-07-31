@@ -50,7 +50,9 @@ header{
     flex-wrap: nowrap;
     justify-content: space-between;
     margin-top: 110px;
+    padding: 15px;
     padding-bottom: 120px;
+    box-sizing: border-box;
 }
 .header-column{
     width: 45%;
@@ -109,6 +111,8 @@ header path{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 15px;
+    box-sizing: border-box;
 }
 .section-row{
     width: 1250px;
@@ -125,6 +129,7 @@ header path{
     flex-direction: column;
     flex-wrap: wrap;
     width: 50%;
+    padding: 5px;
 }
 .section-skill{
     flex-direction: row;
@@ -264,6 +269,22 @@ header path{
     width: 421px;
     height: 458px;
     background-color: #cacaca;
+    background-image: url("../img/chinnese.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.section-img::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
 }
 .bottom-section{
     padding-top: 300px;
@@ -293,12 +314,53 @@ header path{
 }
 .section-items{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .section-item{
-    width: 180px;
+    width: 45%;
     height: 214px;
     background-color: #cacaca;
-    margin: 0 7px 0 7px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
+.section-item::before{
+    content: " ";
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.section-item1{
+    background-image: url("../img/section-item1.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.section-item2{
+    background-image: url("../img/section-item2.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.section-item3{
+    background-image: url("../img/section-item3.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.section-item4{
+    background-image: url("../img/section-item4.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.section-item-text{
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 24px;
 }
 .section-item:first-child{
     margin-left: 0;
@@ -316,7 +378,7 @@ header path{
 .form-title h2{
     font-size: 42px;
     letter-spacing: 1px;
-    line-height: 24px;
+    line-height: 42px;
     color: #000;
     font-weight: 700;
     font-family: "Open Sans";
@@ -486,10 +548,6 @@ footer path{
         margin: 20px;
         text-align: center;
     }
-    .main-row{
-        padding: 5px;
-        box-sizing: border-box;
-    }
     .section-row{
         flex-wrap: wrap;
     }
@@ -514,6 +572,7 @@ footer path{
     }
     .portfolio-themes ul{
         width: auto;
+        flex-wrap: wrap;
     }
     .portfolio-themes li{
         padding: 8px;
@@ -535,12 +594,11 @@ footer path{
     .section-tags ul{
         justify-content: center;
     }
-    .section-item{
-        width: 50%;
-        margin-top: 20px;
+    .section-items{
+        align-items: center;
     }
-    .section-item:first-child{
-        margin-left: 5px;
+    .section-item{
+        width: 48%;
     }
     .portfolio-title h2{
         text-align: center;
@@ -569,6 +627,7 @@ footer path{
     }
     .header-row{
         margin-top: 60px;
+        padding: 0;
     }
     .header-column{
         align-items: center;

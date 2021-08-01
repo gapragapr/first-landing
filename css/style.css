@@ -267,7 +267,7 @@ header path{
 }
 .section-img{
     width: 421px;
-    height: 458px;
+    flex: 1;
     background-color: #cacaca;
     background-image: url("../img/chinnese.jpeg");
     background-repeat: no-repeat;
